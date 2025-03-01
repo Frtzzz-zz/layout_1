@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin-top: 80px;
+}
+
+
+.navcontainer{
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    position: absolute;
+    align-items: center;
+    
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(#14517B, rgb(43, 182, 187));
+}
+
+.navlogo h1{
+    width: 100%;
+    color: #0b293f;
+    font-weight: 800;
+    font-size: 50px;
+    margin: 0;
+}
+
+
+.navmenu li{
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: right;   
+}
+
+.navmenu a{
+    text-decoration: none;
+    color: #0b293f;
+    border-bottom: 2px solid transparent;
+}
+
+
+.navmenu a:hover{
+    color: whitesmoke;
+    text-decoration: none;
+    border-color: #0b293f;
+}
+
+
+
+
+
+
+.herocontainer{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("https://media.istockphoto.com/id/1406189828/photo/home-interior-with-green-lawn.jpg?s=1024x1024&w=is&k=20&c=KGHQvPz6jvgKxW6Bzj0TvtlkNbYj-83niE3uI8qhvWY=");
+    background-repeat: no-repeat;
+}
+
+.heroheader{
+    justify-content: left;
+    text-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.heroheader h2{
+    color: whitesmoke;
+    font-size: 70px;
+}
+
+.heroheader h3{
+    padding-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: 0.5px 0.5px 3px whitesmoke;
+}
+
+.heroheader button{
+    margin: 2% 0 0 0;
+    padding: 1.4rem;
+    background-color: transparent;
+    border: 5px solid #0b293f;
+    border-radius: 50px;
+    font-size: 30px;
+    color: whitesmoke;
+    
+    transition: all 0.4s ease-in-out; /* Smooth transition */
+}
+.heroheader button:hover{
+    background-color: #0b293f;
+    scale: 1.1;
+    box-shadow: 4px 5px 4px #14517B;
+}
+
+
+.heroheader h2, .heroheader h3{
+    animation-name: hero_anim;
+    animation-duration: 1s;
+}
+.heroheader button{
+    animation-name: btn_fade-in;
+    animation-duration: 1.2s;
+}
+@keyframes hero_anim{
+    0%{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+@keyframes btn_fade-in{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+.info_1{
+    display: flex;
+    width: 100%;
+    text-wrap: wrap;
+    padding: 2.5rem; /*padding around*/
+    margin-bottom: 2%;
+    align-items: center;
+    padding-left: 4rem;
+
+    animation: slide-fade-in both;
+    animation-timeline: view(60% 5%);
+}
+
+.info_1 img{
+    max-width: 800px;
+    max-height: 800px;
+    
+}
+
+.info_1 h2{
+    font-size: 40px;
+    position: absolute;
+    margin-bottom: 25%;
+    margin-left: 62.5%;
+    font-size: 50px;
+}
+.info_1 p{
+    padding-top: 10px;
+    padding-left: 40px;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 2.1rem;
+}
+
+
+
+
+
+
+
+.services_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2.5rem;
+}
+
+.service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    border-radius: 4px;
+    width: 250px; /* Adjust the width */
+    height: auto; /* Allow height to expand with content */
+    padding: 15px;
+    text-align: center;
+
+    flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
+    max-width: calc(33.33% - 20px); /* Ensures max width */
+    margin: 2% 0 2% 0;
+}
+
+.service img{
+    max-height: 150px;
+    width: 150px;
+    margin-left: 20%;
+}
+/* TODO: fix this. */
+.service_desc{
+    display: flex;
+    flex-direction: column;
+    text-align: ce;
+    color: #0b293f;
+    width: 250px;
+    height: 250px;
+
+    word-wrap: break-word; /* Ensures long words break */
+    overflow-wrap: break-word; /* Alternative for modern browsers */
+    max-width: 90%; /* Prevents text from overflowing */
+}
+
+
+
+
+
+
+.gallery{
+    width: 80%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.glr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+
+    font-size: 50px;
+    color: #14517B;
+}
+
+.gallery_img1{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-davidmcbee-1546166.jpg");
+    background-size: cover;
+}
+.gallery_img2{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-freestockpro-12955837.jpg");
+    background-size: cover;
+}
+.gallery_img3{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-rdne-8292805.jpg");
+    background-size: cover;
+}
+.gallery_img4{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-a-darmel-7642093.jpg");
+    background-size: cover;
+}
+.gallery_img5{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-thirdman-8470806.jpg");
+    background-size: cover;
+}
+.gallery_img6{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-thirdman-8470811.jpg");
+    background-size: cover;
+}
+.gallery_img7{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-jakubzerdzicki-29624323.jpg");
+    background-size: cover;
+}
+.gallery_img8{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-a-darmel-7641829.jpg");
+    background-size: cover;
+}
+.gallery_img9{
+    width: 400px;
+    height: 250px;
+    background-image: url("assets/img/gallery/pexels-heyho-8146335.jpg");
+    background-size: cover;
+}
+.row1{
+    animation: slide-fade-in both;
+    animation-timeline: view(60% 5%);
+}
+.row2{
+    animation: slide-fade-in both;
+    animation-timeline: view(60% 5%);
+}
+.row3{
+    animation: slide-fade-in both;
+    animation-timeline: view(60% 5%);
+}
+
+
+
+
+
+
+
+.go-to_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.box{
+    display: grid;
+    margin: 25px;
+    width: 350px;
+    height: 300px;
+    background: linear-gradient(whitesmoke, rgb(43, 182, 187), #14517B, #0b293f);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: whitesmoke;
+    box-shadow: 2px 2px 5px 1px #0b293f;
+}
+.box h2{
+    color: #0b293f;
+    font-size: 30px;
+}
+
+.box button{
+    margin: 2% 0 0 0;
+    padding: 1rem;
+    background-color: transparent;
+    border: 2px solid #0b293f;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: 200; 
+    color: whitesmoke;
+}
+.box button:hover{
+    animation-name: box_btnanim;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+@keyframes box_btnanim {
+    50%{
+        background: linear-gradient(whitesmoke, rgb(43, 182, 187));
+        border: 2px solid #0b293f;
+        border-radius: 35px;
+        font-size: 20px;
+        color: black;
+        font-weight: 600;
+        scale: 1.05;
+    }
+    100%{
+        background: linear-gradient(whitesmoke, rgb(43, 182, 187));
+        border: 2px solid #0b293f;
+        border-radius: 35px;
+        font-size: 20px;
+        color: black;
+        font-weight: 600;
+        scale: 1;
+    }
+}
+
+
+
+
+
+.stats_container{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 80px;
+    background-color: #0b293f;
+    color: whitesmoke;
+}
+
+.stat img{
+    height: 100px;
+    width: 100px;
+    filter: invert(100%);
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+.faqs{
+    padding-top: 2.5rem;
+    color: whitesmoke;
+    background-color: #0b293f;
+}
+.faqs h2{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+.faqs ul{
+    padding: 3.5rem 5.5rem 5.5rem 5.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.faqs li{
+    font-size: 30px;
+}
+.faqs p{
+    font-size: 20px;
+}
+
+
+
+.flex_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5.5rem 5.5rem 0 5.5rem;
+    background: linear-gradient(#14517B, rgb(43, 182, 187));
+
+}
+.grid_footer{
+    display: grid;
+    width: 500px;
+    height: 300px;
+}
+.grid_footer li{
+    list-style-type: none;
+    padding: 1.5rem 0 0 0;
+
+    /*text-wrap: wrap;
+    word-wrap: break-word;  Ensures long words break 
+    overflow-wrap: break-word;  Alternative for modern browsers */
+}
+.grid_footer a{
+    text-decoration: none;
+    color: #0b293f;
+    font-weight: 800;
+
+    /*text-wrap: wrap;
+    word-wrap: break-word;  Ensures long words break 
+    overflow-wrap: break-word;  Alternative for modern browsers */
+}
+
+
+
+@keyframes slide-fade-in{
+    0%{
+        opacity: 0;
+        transform: translateY(250px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
